@@ -81,7 +81,7 @@ const dataLinks = [
 ];
 
 const mainLinks = [
-	{ label: "Accueil", link: "/accueil" },
+	{ label: "Accueil", link: "/" },
 	{
 		label: "Assurances",
 		link: "/assurances",
