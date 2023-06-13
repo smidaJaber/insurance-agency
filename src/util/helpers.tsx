@@ -11,28 +11,6 @@ export const TRUNCATE_STYLE: CSSProperties = {
 	textOverflow: "ellipsis",
 };
 
-export function updateTitle() {
-	const { isPinned, config } = store.getState();
-
-	let title = "";
-
-	if (config.activeTab) {
-		const tab = config.tabs.find((t) => t.id === config.activeTab);
-
-		if (tab) {
-			const viewInfo = VIEW_MODES.find((v) => v.id === tab.activeView);
-
-			title += `${tab.name} - GRAU ${viewInfo?.name}`;
-		}
-	}
-
-	if (isPinned) {
-		title += " (Pinned)";
-	}
-
-	//adapter.setWindowTitle(title);
-}
-
 /**
  * Update the config on disk with the current state of the app
  */
